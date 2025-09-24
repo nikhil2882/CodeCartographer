@@ -9,7 +9,7 @@
 - ✅ **Babel parser** for AST generation and dependency extraction
 - ✅ **D3-force** for graph layout and visualization
 - ✅ **pnpm workspace** monorepo structure
-- ✅ **Electron + React + Vite** for desktop app
+- ✅ **Express server + React + Vite** for web interface
 - ✅ **TypeScript** with strict mode
 
 ## Architecture
@@ -19,10 +19,10 @@ packages/
 │   ├── parser/     # AST parsing & dependency extraction
 │   ├── scanner/    # Project traversal & graph building
 │   └── types/      # Shared interfaces
-├── app/            # Electron + React + D3
-│   ├── main/       # Electron main process
-│   ├── renderer/   # React UI + D3 visualization
-│   └── shared/     # IPC communication
+├── app/            # Express server + React + D3
+│   ├── server/     # Express server
+│   ├── client/     # React UI + D3 visualization
+│   └── shared/     # API communication
 └── cli/            # Command line interface (future)
 ```
 
@@ -44,11 +44,12 @@ packages/
 - **Success Criteria:** Core package builds successfully, Babel parser imports work
 - **Status:** ✅ Completed - TypeScript config, Babel parser, Jest testing, build system working
 
-#### Task 3: Setup App Package
-- **Objective:** Setup packages/app with Electron, React, Vite, D3, Zustand dependencies
-- **Deliverable:** App package with all UI dependencies configured
+#### Task 3: Setup App Package ✅ COMPLETED
+- **Objective:** Setup packages/app with Express server, React, Vite, D3, Zustand dependencies
+- **Deliverable:** App package with server and client configured
 - **Time Estimate:** 45 minutes
-- **Success Criteria:** App package builds, Electron window opens, React renders
+- **Success Criteria:** Express server starts, React app renders in browser
+- **Status:** ✅ Completed - Express server + React + Vite + D3 + Zustand setup working
 
 #### Task 4: Create Types Interfaces
 - **Objective:** Create core/src/types.ts with Node, Edge, ProjectGraph interfaces
@@ -74,11 +75,11 @@ packages/
 - **Time Estimate:** 1.5 hours
 - **Success Criteria:** Converts file graph to folder graph, maintains relationships
 
-#### Task 8: Setup Electron Main
-- **Objective:** Create Electron main process with basic window setup
-- **Deliverable:** Electron app that opens window and loads React app
+#### Task 8: Setup Express Server
+- **Objective:** Create Express server that serves React app and provides API endpoints
+- **Deliverable:** Express server that serves web interface and handles API calls
 - **Time Estimate:** 45 minutes
-- **Success Criteria:** Electron window opens, loads React app successfully
+- **Success Criteria:** Express server starts, serves React app, API endpoints work
 
 #### Task 9: Setup React App
 - **Objective:** Create React app with Vite, basic routing, and component structure
