@@ -1,0 +1,16 @@
+{
+  "name": "codecartographer",
+  "version": "1.0.0",
+  "description": "Interactive codebase visualization tool",
+  "private": true,
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "pnpm -r --parallel dev",
+    "test": "pnpm -r test",
+    "clean": "pnpm -r clean"
+  },
+  "keywords": ["code", "visualization", "dependencies", "architecture"],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.17.1"
+}
